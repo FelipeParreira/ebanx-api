@@ -1,0 +1,48 @@
+{
+  "name": "parse-and-save-pdf",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Felipe Parreira",
+  "scripts": {
+    "build": "rimraf ./dist && tsc",
+    "test": "jest --passWithNoTests",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "yarn lint --fix",
+    "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "prettier:watch": "onchange 'src/**/*.ts' -- prettier --write {{changed}}",
+    "start": "yarn build && node dist/index.js",
+    "start:dev": "nodemon"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn prettier-format && yarn lint"
+    }
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bluebird": "^3.5.32",
+    "@types/jest": "^26.0.4",
+    "@types/node": "^14.0.22",
+    "@types/pdf-parse": "^1.1.0",
+    "@typescript-eslint/eslint-plugin": "^3.6.0",
+    "@typescript-eslint/parser": "^3.6.0",
+    "eslint": "7.2.0",
+    "eslint-config-airbnb-base": "14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-no-loops": "^0.3.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "jest": "^26.1.0",
+    "nodemon": "^2.0.4",
+    "onchange": "^7.0.2",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.6"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "pdf-parse": "^1.1.1"
+  }
+}
