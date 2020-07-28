@@ -6,6 +6,9 @@
     "prettier",
     "no-loops"
   ],
+  "env": {
+    "jest": true
+  },
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
@@ -15,6 +18,19 @@
   "rules": {
     "no-console": 1,
     "no-loops/no-loops": 2,
-    "prettier/prettier": 2
+    "prettier/prettier": 2,
+    "import/extensions": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
   }
 }

@@ -1,13 +1,18 @@
 {
   "compilerOptions": {
-    "target": "es5",                          
-    "module": "es6",                    
-    "lib": ["es6"],                     
-    "allowJs": true,
+    "target": "ES2019",
+    "module": "commonjs",
+    "incremental": true,
     "outDir": "dist",                          
     "rootDir": "src",
+    "baseUrl": "src",
     "strict": true,         
     "noImplicitAny": true,
-    "esModuleInterop": true
-  }
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "sourceMap": true
+  },
+  "exclude": ["./**/*.spect.ts", "./**/*.test.ts"],
+  "include": ["src/**/*"]
 }
