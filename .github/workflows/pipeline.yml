@@ -7,7 +7,7 @@ on:
 
 jobs:
   lint:
-    name: Lint
+    name: QA Pipeline
     strategy:
       matrix:
         node-version: [12.x]
