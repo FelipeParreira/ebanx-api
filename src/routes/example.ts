@@ -7,7 +7,7 @@ const router = express.Router();
 export default (app: express.Router): void => {
   app.use('/example', router);
 
-  router.get('/', (req, res) => {
+  router.get('/', (_, res) => {
     res.status(httpStatus.OK);
     res.send(`1 + 2 = ${add(1, 2)}`);
   });
