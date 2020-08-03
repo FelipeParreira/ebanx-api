@@ -1,6 +1,7 @@
 import bodyParser from 'body-parser';
 import express from 'express';
 import helmet from 'helmet';
+import morgan from 'morgan';
 import cors from 'cors';
 
 import exampleRoute from './routes/example';
@@ -13,6 +14,7 @@ const app = express();
 app.use(helmet());
 
 app.use(cors());
+app.use(morgan('tiny'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
