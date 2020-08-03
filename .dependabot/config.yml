@@ -2,14 +2,10 @@ version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
-    default_labels:
-      - "update-dependencies"
     schedule:
       interval: "daily"
 
   - package-ecosystem: "docker"
     directory: "/"
-    default_labels:
-      - "update-dependencies"
     schedule:
       interval: "weekly"

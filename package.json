@@ -13,7 +13,8 @@
     "lint:fix": "yarn lint --fix",
     "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "prettier:watch": "onchange 'src/**/*.ts' -- prettier --write {{changed}}",
-    "start": "yarn build && node dist/index.js",
+    "run-server": "node dist/index.js",
+    "start": "yarn build && yarn run-server",
     "start:dev": "nodemon"
   },
   "husky": {

@@ -1,6 +1,8 @@
+Makefile
 node_modules/
-.git
 coverage/
 .dockerignore
 Dockerfile
+.git
 .gitignore
+.github
