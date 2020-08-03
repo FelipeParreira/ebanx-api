@@ -11,7 +11,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "{{api_url}}/api/health_check/",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"api",
+						"health_check",
+						""
+					]
 				}
 			},
 			"response": []
@@ -22,7 +30,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "{{api_url}}/api/example/",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"api",
+						"example",
+						""
+					]
 				}
 			},
 			"response": []
