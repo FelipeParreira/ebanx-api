@@ -9,9 +9,6 @@ export default (app: express.Router): void => {
 
   router.get('/', (req, res) => {
     res.status(httpStatus.OK);
-    res.send(`
-      Hello, world!
-      1 + 2 = ${add(1, 2)}
-    `);
+    res.send(`1 + 2 = ${add(1, 2)}`);
   });
 };
