@@ -2,7 +2,7 @@ import * as httpStatus from 'http-status-codes';
 import express from 'express';
 import add from '../utils';
 
-export const router = express.Router();
+const router = express.Router();
 
 export default (app: express.Router): void => {
   app.use('/example', router);
