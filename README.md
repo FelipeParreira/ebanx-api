@@ -2,6 +2,10 @@
 
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 
+## Description
+
+This is a boilerplate repo for an ExpressJS web REST API, using TypeScript.
+
 ## Commands
 
 Command | Description | 
@@ -17,6 +21,10 @@ Command | Description |
 `$ yarn audit` | Audit dependencies
 `$ make runserver` | Run server in Docker container
 `$ make shutdown` | Shutdown docker container
+
+## License
+
+The code is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Docs
  - [NodeJS](https://nodejs.org/en/docs/)
