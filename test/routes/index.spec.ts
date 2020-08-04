@@ -15,7 +15,7 @@ describe('GET /api/health_check/', () => {
   });
 });
 
-describe('GET /example/', () => {
+describe('GET /api/example/', () => {
   it('should have the correct status code and message', () => {
     request(app)
       .get('/api/example')
