@@ -5,17 +5,18 @@
   "author": "Felipe Parreira",
   "scripts": {
     "build": "tsc",
-    "test": "jest --passWithNoTests --testPathIgnorePatterns ./test/routes/*.ts",
-    "test:watch": "yarn test --watch",
-    "test:e2e": "jest --passWithNoTests test/routes",
-    "test:e2e:watch": "yarn test:e2e --watch",
+    "copy-env": "(test -f .env || cp .env.example .env)",
+    "test": "yarn copy-env && jest --passWithNoTests --testPathIgnorePatterns ./test/routes/*.ts",
+    "test:watch": "yarn copy-env && yarn test --watch",
+    "test:e2e": "yarn copy-env && jest --passWithNoTests test/routes",
+    "test:e2e:watch": "yarn copy-env && yarn test:e2e --watch",
     "lint": "eslint . --ext .ts",
     "lint:fix": "yarn lint --fix",
     "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "prettier:watch": "onchange 'src/**/*.ts' -- prettier --write {{changed}}",
     "run-server": "node dist/index.js",
     "start": "yarn build && yarn run-server",
-    "start:dev": "nodemon"
+    "start:dev": "yarn copy-env && nodemon"
   },
   "husky": {
     "hooks": {

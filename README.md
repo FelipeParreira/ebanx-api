@@ -20,7 +20,7 @@ Command | Description |
 `$ yarn lint:fix` | Fix linting
 `$ yarn audit` | Audit dependencies
 `$ make runserver` | Run server in Docker container
-`$ make shutdown` | Shutdown docker container
+`$ make shutdown` | Shutdown Docker container
 
 ## License
 
