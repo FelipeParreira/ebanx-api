@@ -1,5 +1,5 @@
 # Debugging in VS Code
- Using the following file for your `.vscode/launch.json`, press `F6` to start debugging.
+ Using the **JSON** object below as the content for your `.vscode/launch.json` file, press `F6` to start debugging.
 
 ```json
 {
