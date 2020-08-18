@@ -13,7 +13,7 @@ const app = express();
 app.use(helmet());
 
 app.use(cors());
-app.use(morgan('tiny'));
+app.use(morgan('tiny', { skip: () => process.env.NODE_ENV === 'test' }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
