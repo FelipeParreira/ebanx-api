@@ -12,7 +12,7 @@ describe('GET /health_check', () => {
 });
 
 describe('POST /reset', () => {
-  it('should should return 200 OK', async () => {
+  it('should return 200 OK', async () => {
     const res = await request(app).post('/reset');
     expect(res.status).toBe(httpStatus.OK);
     expect(res.text).toBe('OK');
@@ -41,7 +41,7 @@ describe('POST /event', () => {
       .send({ type: 'deposit', destination: '100', amount: 10 });
 
     expect(res.status).toBe(httpStatus.CREATED);
-    expect(res.body).toBe({ destination: { id: '100', balance: 10 } });
+    expect(res.body).toEqual({ destination: { id: '100', balance: 10 } });
   });
 
   it('should deposit into an existing account', async () => {
@@ -50,7 +50,7 @@ describe('POST /event', () => {
       .send({ type: 'deposit', destination: '100', amount: 10 });
 
     expect(res.status).toBe(httpStatus.CREATED);
-    expect(res.body).toBe({ destination: { id: '100', balance: 20 } });
+    expect(res.body).toEqual({ destination: { id: '100', balance: 20 } });
   });
 
   it('should not withdraw from a non-existing account', async () => {
@@ -68,7 +68,7 @@ describe('POST /event', () => {
       .send({ type: 'withdraw', origin: '100', amount: 5 });
 
     expect(res.status).toBe(httpStatus.CREATED);
-    expect(res.body).toBe({ destination: { id: '100', balance: 15 } });
+    expect(res.body).toEqual({ origin: { id: '100', balance: 15 } });
   });
 
   it('should transfer from an existing account', async () => {
@@ -80,7 +80,7 @@ describe('POST /event', () => {
     });
 
     expect(res.status).toBe(httpStatus.CREATED);
-    expect(res.body).toBe({
+    expect(res.body).toEqual({
       origin: { id: '100', balance: 0 },
       destination: { id: '300', balance: 15 },
     });
