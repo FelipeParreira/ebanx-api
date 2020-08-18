@@ -4,8 +4,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import cors from 'cors';
 
-import exampleRoute from './routes/example';
-import defaultRoute from './routes/health_check';
+import router from './routes';
 
 const app = express();
 
@@ -18,11 +17,6 @@ app.use(morgan('tiny'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// API routes
-const api = express.Router();
-
-app.use('/api', api);
-exampleRoute(api);
-defaultRoute(api);
+app.use('/', router);
 
 export default app;
