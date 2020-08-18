@@ -1,10 +1,10 @@
-# Express TypeScript Boilerplate
+# Ebanx Engineering Challenge
 
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 
 ## Description
 
-This is a boilerplate repo for an ExpressJS web REST API, using TypeScript.
+This is a RESTful API built with ExpressJS and TypeScript.
 
 ## Commands
 

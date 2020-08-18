@@ -1,5 +1,5 @@
 {
-  "name": "boilerplate",
+  "name": "ebanx-api",
   "version": "1.0.0",
   "main": "src/index.js",
   "author": "Felipe Parreira",
@@ -8,7 +8,7 @@
     "copy-env": "(test -f .env || cp .env.example .env)",
     "test": "yarn copy-env && jest --passWithNoTests --testPathIgnorePatterns ./test/routes/*.ts",
     "test:watch": "yarn copy-env && yarn test --watch",
-    "test:e2e": "yarn copy-env && jest --passWithNoTests test/routes",
+    "test:e2e": "NODE_ENV=test yarn copy-env && jest --passWithNoTests test/routes",
     "test:e2e:watch": "yarn copy-env && yarn test:e2e --watch",
     "lint": "eslint . --ext .ts",
     "lint:fix": "yarn lint --fix",
@@ -36,6 +36,7 @@
     "@types/morgan": "^1.9.1",
     "@types/node": "^14.0.22",
     "@types/supertest": "^2.0.10",
+    "@types/yup": "^0.29.5",
     "@typescript-eslint/eslint-plugin": "^3.6.0",
     "@typescript-eslint/parser": "^3.6.0",
     "eslint": "7.2.0",
@@ -64,6 +65,7 @@
     "helmet": "^3.23.3",
     "http-status-codes": "^1.4.0",
     "morgan": "^1.10.0",
-    "winston": "^3.3.3"
+    "winston": "^3.3.3",
+    "yup": "^0.29.3"
   }
 }
