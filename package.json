@@ -6,9 +6,9 @@
   "scripts": {
     "build": "tsc",
     "copy-env": "(test -f .env || cp .env.example .env)",
-    "test": "yarn copy-env && jest --passWithNoTests --testPathIgnorePatterns ./test/routes/*.ts",
+    "test": "yarn copy-env && jest --verbose --passWithNoTests --testPathIgnorePatterns ./test/routes/*.ts",
     "test:watch": "yarn copy-env && yarn test --watch",
-    "test:e2e": "NODE_ENV=test yarn copy-env && jest --passWithNoTests test/routes",
+    "test:e2e": "NODE_ENV=test yarn copy-env && jest --verbose --passWithNoTests test/routes",
     "test:e2e:watch": "yarn copy-env && yarn test:e2e --watch",
     "lint": "eslint . --ext .ts",
     "lint:fix": "yarn lint --fix",
