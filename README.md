@@ -10,9 +10,9 @@ It contains basically four routes:
   * **POST** */reset*
   * **POST** */event*
 
-It was developed without a persistency layer, which means there is no database attached to the application. All state is stored in local memory (*i.e.* once you re-start the app all state is re-set).
+It was developed without a persistence layer, which means there is no database attached to the application. All state is stored in local memory (*i.e.* once you re-start the app all state is re-set).
 
-It was developed using an MVC architecture, in which the model defines the entities (see [model](./src/model) and [storage](./src/storage)); the [controller](./src/route) exposes an interface to deal with the entities, and the view (or [services](./src/service), as they are called here) provide the business rules for the manipulation and presentation/visualization of the entities.
+It was developed using an MVC architecture, in which the model defines the entities (see [model](./src/model) and [storage](./src/storage)); the [controller](./src/routes) (or *routes*) exposes an interface to deal with the entities, and the view (or [service](./src/service), as it is called here) provides the business rules for the manipulation and presentation/visualization of the entities.
 
 
 ## Folders & Files (`./src`)
@@ -24,7 +24,7 @@ Folder/File | Description
   [`/service`](./src/service) | Contains the business logic, is called by the routes, dependes upon the model, and exports other utilities that are directly called by the routes. 
   [`/DTOs`](./src/DTOs) | Defines data tranfer objects, which constitute the contract between the client and the API in both directions. It is depended upon by `/service`.
   [`/model`](./src/model) | Defines the operations that can be performed upon the data stored in memory. It is called by `/service` and dependes upon `/storage`.
-  [`/storage`](./src/storage) | Defines how data is stored (in the current case, it is stored in memory as a JavaScript Object). It also exposes some utilities that allow direct interaction with the "persistent" layer itself.
+  [`/storage`](./src/storage) | Defines how data is stored (in the current case, it is stored in memory as a JavaScript Object). It also exposes some utilities that allow direct interaction with the in-memory storage layer itself.
 
 ## Commands
 
@@ -47,7 +47,7 @@ Command | Description |
 The code is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
 ## API Docs
-After having initilalized the API locally, one can access the **Swagger Docs** by visiting this [page](http://localhost:3000/api-docs/).
+After having initilalized the API locally, one can access the **Swagger Docs** by visiting [this page](http://localhost:3000/api-docs/).
 
 ## 3rd Party Docs
  - [NodeJS](https://nodejs.org/en/docs/)
