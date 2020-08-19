@@ -6,7 +6,7 @@ services:
     build:
       context: .
       target: builder
-    container_name: "ts-express-boilerplate"
+    container_name: "ebanx-api"
     ports:
       - "3000:3000"
     expose:

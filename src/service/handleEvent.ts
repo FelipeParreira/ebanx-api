@@ -51,7 +51,7 @@ const eventHandlers: {
 };
 
 export const handleEvent = (event: eventDTO): processedEventDTO => {
-  const processedEvent = eventHandlers[event.type](event);
+  const processedEvent = eventHandlers[String(event.type)](event);
 
   const balanceUpdates: balanceUpdateDTO[] = Object.values(processedEvent);
   // eslint-disable-next-line prettier/prettier
