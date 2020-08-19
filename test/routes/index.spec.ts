@@ -53,15 +53,6 @@ describe('POST /event', () => {
     expect(res.body).toEqual({ destination: { id: '100', balance: 20 } });
   });
 
-  it('should not withdraw from a non-existing account', async () => {
-    const res = await request(app)
-      .post('/event')
-      .send({ type: 'withdraw', origin: '200', amount: 10 });
-
-    expect(res.status).toBe(httpStatus.NOT_FOUND);
-    expect(res.text).toBe('0');
-  });
-
   it('should withdraw from an existing account', async () => {
     const res = await request(app)
       .post('/event')
@@ -69,6 +60,15 @@ describe('POST /event', () => {
 
     expect(res.status).toBe(httpStatus.CREATED);
     expect(res.body).toEqual({ origin: { id: '100', balance: 15 } });
+  });
+
+  it('should not withdraw from a non-existing account', async () => {
+    const res = await request(app)
+      .post('/event')
+      .send({ type: 'withdraw', origin: '200', amount: 10 });
+
+    expect(res.status).toBe(httpStatus.NOT_FOUND);
+    expect(res.text).toBe('0');
   });
 
   it('should transfer from an existing account', async () => {
