@@ -49,6 +49,8 @@ The code is available as open source under the terms of the [MIT License](https:
 ## API Docs
 After having initilalized the API locally, one can access the **Swagger Docs** by visiting [this page](http://localhost:3000/api-docs/).
 
+There is also a [Postman folder](./postman) with a collection and an environment to test the endpoints locally.
+
 ## 3rd Party Docs
  - [NodeJS](https://nodejs.org/en/docs/)
  - [TypeScript](https://www.typescriptlang.org/docs/home.html)
