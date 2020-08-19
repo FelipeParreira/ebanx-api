@@ -1,15 +1,19 @@
 # Ebanx Engineering Challenge
 
-[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
-
 ## Description
 
 This is a RESTful API built with ExpressJS and TypeScript.
 
 It contains basically four routes:
-<!-- list/talk about the routes -->
-<!-- talk about local storage -->
-<!-- talk about MVC pattern -->
+  * **GET**  */health_check*
+  * **GET**  */balance?account_id=1234*
+  * **POST** */reset*
+  * **POST** */event*
+
+It was developed without a persistency layer, which means there is no database attached to the application. All state is stored in local memory (*i.e.* once you re-start the app all state is re-set).
+
+It was developed using an MVC architecture, in which the model defines the entities (see [model](./src/model) and [storage](./src/storage)); the [controller](./src/route) exposes an interface to deal with the entities, and the view (or [services](./src/service), as they are called here) provide the business rules for the manipulation and presentation/visualization of the entities.
+
 
 ## Folders & Files (`./src`)
 Folder/File | Description
@@ -42,7 +46,10 @@ Command | Description |
 
 The code is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-## Docs
+## API Docs
+After having initilalized the API locally, one can access the **Swagger Docs** by visiting this [page](http://localhost:3000/api-docs/).
+
+## 3rd Party Docs
  - [NodeJS](https://nodejs.org/en/docs/)
  - [TypeScript](https://www.typescriptlang.org/docs/home.html)
  - [ExpressJS](https://expressjs.com/en/guide/routing.html)
