@@ -12,7 +12,7 @@ It contains basically four routes:
 
 It was developed without a persistence layer, which means there is no database attached to the application. All state is stored in local memory (*i.e.* once you re-start the app all state is re-set).
 
-It was developed using an MVC architecture, in which the model defines the entities (see [model](./src/model) and [storage](./src/storage)); the [controller](./src/routes) (or *routes*) exposes an interface to deal with the entities, and the view (or [service](./src/service), as it is called here) provides the business rules for the manipulation and presentation/visualization of the entities.
+It was developed using an MVC architecture, in which the model defines the entities (see [model](./src/model) and [storage](./src/storage)); the controller (or [routes](./src/routes)) exposes an interface to deal with the entities, and the view (or [service](./src/service), as it is called here) provides the business rules for the manipulation and presentation/visualization of the entities.
 
 
 ## Folders & Files (`./src`)
