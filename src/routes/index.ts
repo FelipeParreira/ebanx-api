@@ -19,16 +19,16 @@ router.get('/balance', (req, res) => {
   return res.status(httpStatus.OK).send(balance.toString());
 });
 
+router.post('/reset', (_, res) => {
+  clearStorage();
+  res.status(httpStatus.OK).send('OK');
+});
+
 router.post('/event', (req, res) => {
   const { body: event } = req;
   eventDTOSchema.validateSync(event);
   const result = handleEvent(event);
   return res.status(httpStatus.CREATED).json(result);
-});
-
-router.post('/reset', (_, res) => {
-  clearStorage();
-  res.status(httpStatus.OK).send('OK');
 });
 
 router.use(

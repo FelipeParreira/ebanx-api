@@ -6,7 +6,6 @@ import morgan from 'morgan';
 import cors from 'cors';
 
 import swaggerDocument from '../docs/swagger.json';
-
 import router from './routes';
 
 const app = express();
