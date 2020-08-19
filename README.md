@@ -47,7 +47,7 @@ Command | Description |
 The code is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
 ## API Docs
-After having initilalized the API locally, one can access the **Swagger Docs** by visiting [this page](http://localhost:3000/api-docs/).
+Once the API is running locally, one can access the **Swagger Docs** by visiting [this page](http://localhost:3000/api-docs/).
 
 There is also a [Postman folder](./postman) with a collection and an environment to test the endpoints locally.
 
