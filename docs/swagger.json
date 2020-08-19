@@ -13,7 +13,12 @@
       ],
       "properties": {
         "type": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "deposit",
+            "withdraw",
+            "transfer"
+          ]
         },
         "amount": {
           "type": "number"
@@ -24,6 +29,12 @@
         "destination": {
           "type": "string"
         }
+      },
+      "example": {
+        "type": "transfer",
+        "amount": 20,
+        "origin": "100",
+        "destination": "200"
       }
     },
     "processedEvent": {
@@ -58,6 +69,16 @@
               "type": "number"
             }
           }
+        }
+      },
+      "example": {
+        "origin": {
+          "id": "100",
+          "balance": 0
+        },
+        "destination": {
+          "id": "200",
+          "balance": 20
         }
       }
     }
